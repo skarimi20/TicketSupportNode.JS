@@ -1,3 +1,5 @@
 {
-  "jwtPrivateKey": "wedwe4tc1mn4yf1973yf"
+  "jwtPrivateKey": "wedwe4tc1mn4yf1973yf",
+  "db": "mongodb://localhost/ticket"
+
 }
