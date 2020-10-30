@@ -2,7 +2,8 @@
   "jwtPrivateKey": "",
   "db_password":"",
   "UserApiKey": "",
-  "SecretKey": ""
+  "SecretKey": "",
+  "db": ""
 
 }
 
