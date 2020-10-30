@@ -1,6 +1,6 @@
 {
   "jwtPrivateKey": "",
-  "db": "",
+  "db_password":"",
   "UserApiKey": "",
   "SecretKey": ""
 
