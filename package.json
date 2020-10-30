@@ -30,5 +30,8 @@
     "querystring": "^0.2.0",
     "request": "^2.88.2",
     "winston": "^3.3.3"
+  },
+  "compilerOptions": {
+    "skipLibCheck": true
   }
 }
