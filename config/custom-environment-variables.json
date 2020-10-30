@@ -1,3 +1,6 @@
 {
-  "jwtPrivateKey": "app_jwtPrivateKey"
+  "jwtPrivateKey": "ticketapp_jwt",
+  "db": "ticketapp_db",
+  "UserApiKey": "ticket_user",
+  "SecretKey": "ticket_key"
 }

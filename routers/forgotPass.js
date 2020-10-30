@@ -2,6 +2,7 @@ const _ = require('lodash');
 const {User} = require('../models/userModel');
 const mongoose = require('mongoose');
 const express = require('express');
+const config = require('config');
 const request = require('request');
 const router = express.Router();
 let Token = '';
@@ -16,8 +17,8 @@ router.post('/', async(req,res,next) =>{
         const code = req.body.SecretCode;
 
         const data = {
-            UserApiKey : 'bc7443bdba97546ec4f243bd',
-            SecretKey: '@@@AAssAAwwef@'
+          UserApiKey : config.get('UserApiKey'),
+          SecretKey: config.get('SecretKey')
         }
     
           request.post({url: 'https://RestfulSms.com/api/Token',form: data}, function (err , cb, body) {
