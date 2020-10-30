@@ -1,6 +1,5 @@
 const auth = require('../middlewear/auth');
 const config = require('config');
-const bcrypt = require('bcrypt');
 const {User} = require('../models/userModel');
 const mongoose = require('mongoose');
 const express = require('express');

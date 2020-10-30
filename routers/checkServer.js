@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const {Version} = require('../models/version');
 const {User} = require('../models/userModel');
 const mongoose = require('mongoose');

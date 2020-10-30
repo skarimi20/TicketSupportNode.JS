@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const auth = require('../middlewear/auth');
 const config = require('config');
-const bcrypt = require('bcrypt');
 const _ = require('lodash');
 const {User} = require('../models/userModel');
 const express = require('express');
@@ -21,10 +20,8 @@ router.post('/update', auth, async (req,res,next) =>{
     const newPassword = req.body.newPassword;
     const oldPassword = req.body.oldPassword;
     if(newPassword || oldPassword){
-    const validPassword = await bcrypt.compare(oldPassword, user.password);
-    if (!validPassword) return res.status(400).send('Password id Wrong!');
-    const salt =  await bcrypt.genSalt(10);
-    user.password =  await bcrypt.hash(newPassword, salt);
+    if(oldPassword === user.password){
+    user.password =  req.body.password;
     user.name = name;
     user.number = number;
     const save = await user.save();
@@ -33,6 +30,9 @@ router.post('/update', auth, async (req,res,next) =>{
     }else{
         res.status(500).send("Error");
     }
+        }else{
+            res.send(400).send('Password is incorrect')
+        }
     }else{
         user.name = name;
     user.number = number;

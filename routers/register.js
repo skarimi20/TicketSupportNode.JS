@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const auth = require('../middlewear/auth');
 const config = require('config');
-const bcrypt = require('bcrypt');
 const _ = require('lodash');
 const {User} = require('../models/userModel');
 const mongoose = require('mongoose');
@@ -69,8 +68,6 @@ router.post('/user',async (req,res,next) =>{
         res.status(400).send('Please Enter name, number , password');
     }
     user = new User(_.pick(req.body, ['name', 'number', 'password']));
-        const salt =  await bcrypt.genSalt(10);
-        user.password =  await bcrypt.hash(user.password, salt);
         await user.save();
       
         const token = user.generateAuthToken();
