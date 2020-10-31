@@ -21,7 +21,7 @@ router.post('/update', auth, async (req,res,next) =>{
     const oldPassword = req.body.oldPassword;
     if(newPassword || oldPassword){
     if(oldPassword === user.password){
-    user.password =  req.body.password;
+    user.password =  req.body.newPassword;
     user.name = name;
     user.number = number;
     const save = await user.save();
