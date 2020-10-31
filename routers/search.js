@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/',auth,async(req,res,next) =>{
     const search = req.body.searchString;
-    var result = await Ticket.find({title:search,answers:search});
+    var result = await Ticket.find({title:search,answers:{'$in': [search]}});
 
     if(result){
         res.status(200).send(result);
