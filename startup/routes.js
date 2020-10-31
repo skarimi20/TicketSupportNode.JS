@@ -5,6 +5,7 @@ const forgotPass = require('../routers/forgotPass');
 const ticketRouter = require('../routers/ticket');
 const userRouter = require('../routers/user');
 const appVersion = require('../routers/checkServer');
+const search = require('../routers/search');
 const error = require('../middlewear/error');
 
 module.exports = function(app) {
@@ -14,7 +15,8 @@ module.exports = function(app) {
   app.use('/api/forgot', forgotPass );
   app.use('/api/ticket', ticketRouter );
   app.use('/api/user', userRouter);
-  app.use('/api/version', appVersion);  
+  app.use('/api/version', appVersion); 
+  app.use('/api/search', search) ;
   app.use(error);
 
 }
