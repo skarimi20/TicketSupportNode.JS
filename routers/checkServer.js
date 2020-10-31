@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/',async(req,res,next) =>{
-    const version = await Version.findById('5f9abff8e8fd264f9708212f');
+    const version = await Version.findById('5f9d4e0a882784ab7ccd4fa6');
     res.status(200).send(version);
 });
 
