@@ -6,15 +6,11 @@ const router = express.Router();
 
 router.post('/',auth,async(req,res,next) =>{
     const search = req.body.searchString;
-    await Ticket.find({title:search})
-    .exec(function(err, result) {
-        if(err){
-            res.status(500).send('Server Error');
-        }else{
-            res.send(200).send(result);
-        }
+    var result = await Ticket.find({title:search});
 
-    });
+    if(result){
+        res.status(200).send(result);
+    }
 });
 
 
