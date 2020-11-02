@@ -11,4 +11,4 @@ in this Project you will learn:
 6. sending SMS to user mobile number with www.sms.ir (an iranian SMS provider). 
 
 Attention: in this project we dont Hashing Passwords because HEROCU! please Encrypt Passwords with Bycrypt or etc. 
-Don't hesitate to send Questions and Suggests.
+Please Don't hesitate to send Questions and Suggests.
