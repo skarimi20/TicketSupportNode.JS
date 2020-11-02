@@ -5,8 +5,8 @@ The NodeJs REST API for Ticket Support Android Application (https://github.com/s
 in this Project you will learn: 
 1. Save, Read, Update and Delete data in MongoDB with mongoose module.
 2. Authentication and Authorization with JWT (https://jwt.io/introduction/).
-3. Creat CRUD operations with ExpressJS framework.
-4. Working with Models, Middlewears, config, logging, 
+3. Create CRUD operations with ExpressJS framework.
+4. Working with Models, Middlewears, config, logging and etc.
 5. Proper storing files and folders.
 6. sending SMS to user mobile number with www.sms.ir (an iranian SMS provider). 
 
